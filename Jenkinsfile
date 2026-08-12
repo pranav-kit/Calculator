@@ -17,11 +17,11 @@ pipeline {
                 bat 'echo "Build executed on $(date)" > build-info.txt'
             }
         }
+    }
 
-        post {
-            success {
-                echo 'Build successful! Ready for release.'
-            }
+    post {
+        success {
+            echo 'Build successful! Ready for release.'
         }
     }
 }
